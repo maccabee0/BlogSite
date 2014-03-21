@@ -1,0 +1,13 @@
+C:\Users\Maccabee\Documents\Visual Studio 2012\Projects\Blog\Blog.Domain\bin\Debug\Blog.Domain.dll
+C:\Users\Maccabee\Documents\Visual Studio 2012\Projects\Blog\Blog.Domain\bin\Debug\Blog.Domain.pdb
+C:\Users\Maccabee\Documents\Visual Studio 2012\Projects\Blog\Blog.Domain\obj\Debug\Blog.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Maccabee\Documents\Visual Studio 2012\Projects\Blog\Blog.Domain\obj\Debug\Blog.Domain.dll
+C:\Users\Maccabee\Documents\Visual Studio 2012\Projects\Blog\Blog.Domain\obj\Debug\Blog.Domain.pdb
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Domain\bin\Debug\Blog.Domain.dll
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Domain\bin\Debug\Blog.Domain.pdb
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Domain\obj\Debug\Blog.Domain.csprojResolveAssemblyReference.cache
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Domain\obj\Debug\Blog.Domain.dll
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Domain\obj\Debug\Blog.Domain.pdb
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Domain\bin\Debug\Blog.Domain.dll.config
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Domain\bin\Debug\EntityFramework.dll
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Domain\bin\Debug\EntityFramework.xml

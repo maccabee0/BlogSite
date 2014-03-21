@@ -1,0 +1,24 @@
+﻿@model BlogSite.Domain.Entities.User
+
+@{
+    ViewBag.Title = "UserProfile";
+    string name = Model.UserName;
+}
+
+<h2>UserProfile</h2>
+<div id="user">
+    <h3>@name</h3>
+    <h4>@Model.JoinDate.ToShortDateString()</h4>
+</div>
+@{
+    Html.RenderPartial("BlogSummary", @Model.Blogs);
+}
+<div id="userRoles">
+    <h4>@name's Current Roles:</h4>
+    <ul>
+        @foreach (var role in @Model.Roles)
+        {
+            <li>@role.Name</li>
+        }
+    </ul>
+</div>

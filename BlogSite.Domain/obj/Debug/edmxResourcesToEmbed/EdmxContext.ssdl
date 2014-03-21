@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EdmxContext.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="EdmxContextStoreContainer">
+    <EntitySet Name="Blogs" EntityType="EdmxContext.Store.Blogs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Comments" EntityType="EdmxContext.Store.Comments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="EdmxContext.Store.Users" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__Blogs__OwnerId__625A9A57" Association="EdmxContext.Store.FK__Blogs__OwnerId__625A9A57">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Blogs" EntitySet="Blogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comments__Author__690797E6" Association="EdmxContext.Store.FK__Comments__Author__690797E6">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comments__BlogId__681373AD" Association="EdmxContext.Store.FK__Comments__BlogId__681373AD">
+      <End Role="Blogs" EntitySet="Blogs" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Blogs">
+    <Key>
+      <PropertyRef Name="BlogId" />
+    </Key>
+    <Property Name="BlogId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="int" Nullable="false" />
+    <Property Name="Subject" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+    <Property Name="PostDate" Type="date" />
+  </EntityType>
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="CommentId" />
+    </Key>
+    <Property Name="CommentId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BlogId" Type="int" Nullable="false" />
+    <Property Name="AuthorId" Type="int" Nullable="false" />
+    <Property Name="Text" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="PostDate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="varchar" MaxLength="12" />
+    <Property Name="PasswordHash" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Birthday" Type="date" Nullable="false" />
+    <Property Name="JoinDate" Type="date" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Blogs__OwnerId__625A9A57">
+    <End Role="Users" Type="EdmxContext.Store.Users" Multiplicity="1" />
+    <End Role="Blogs" Type="EdmxContext.Store.Blogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Blogs">
+        <PropertyRef Name="OwnerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comments__Author__690797E6">
+    <End Role="Users" Type="EdmxContext.Store.Users" Multiplicity="1" />
+    <End Role="Comments" Type="EdmxContext.Store.Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="AuthorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comments__BlogId__681373AD">
+    <End Role="Blogs" Type="EdmxContext.Store.Blogs" Multiplicity="1" />
+    <End Role="Comments" Type="EdmxContext.Store.Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Blogs">
+        <PropertyRef Name="BlogId" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="BlogId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

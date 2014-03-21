@@ -1,0 +1,19 @@
+﻿@model BlogSite.Web.Models.LogOnViewModel
+
+@{
+    ViewBag.Title = "Log in";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="form-signin-heading">Log In</h2>
+<p>Please log in or @Html.ActionLink("Register", "Register") here:</p>
+<div class="form-signin">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        @Html.EditorForModel()
+        <p>
+            <input type="submit" value="Log In" class="btn btn-inverse"/>
+        </p>
+    }
+</div>

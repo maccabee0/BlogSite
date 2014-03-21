@@ -1,0 +1,28 @@
+﻿@using BlogSite.Web.Infrastructure.HtmlHelpers
+@model BlogSite.Web.Models.BlogListViewModel
+@{
+    ViewBag.Title = "All Blogs";
+    Layout = "../Shared/_Layout.cshtml";
+}
+@if (TempData["message"] != null)
+{
+    <h2>@TempData["message"]</h2>
+}
+@Html.Hidden("pagerUrl", @Url.Action("BlogsPager"))
+@Html.Hidden("pager", @Url.Action("GetAllBlogs", "Blogs"))
+@Html.HiddenFor(b => b.Blogs)
+<h1>All Blogs</h1>
+
+@{
+    Html.RenderAction("BlogsPager");
+}
+<div class="pagination">
+    <ul>
+        @Html.PageLinks(@Model.PagingInfo, x => Url.RouteUrl("BlogsPager", new { page = x }))
+    </ul>
+</div>
+@section scripts
+{
+    @Scripts.Render("~/Scripts/knockout-2.1.0.js")
+    @Scripts.Render("~/Scripts/Blog.js")
+}

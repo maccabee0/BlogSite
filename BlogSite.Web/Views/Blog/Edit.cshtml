@@ -1,0 +1,38 @@
+﻿@model BlogSite.Domain.Entities.Blog
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit @Model.Subject</h2>
+
+@using (Html.BeginForm("Edit", "Blog", FormMethod.Post, new { enctype = "mutipart/form-data", target="UploadTarget" }))
+{
+    @Html.Hidden("inputToString", @Url.Action("GetText"))
+    @Html.HiddenFor(x => x.BlogId)
+    @Html.HiddenFor(x => x.UserId)
+    @Html.EditorForModel()
+    <div>
+        Upload File:
+            <input type="file" id="blogText" />
+        <input id="blogTextSubmit" type="button" class="btn btn-inverse" value="Upload" />
+        <br />
+    </div>
+    <input id="blogSumbit" type="submit" value="Post Blog" class="btn" />
+    <br />
+    @Html.ActionLink("Nevermind", "Index", "Home")   
+}
+<form id="ajaxUploadForm" action="@Url.Action("GetText")" method="POST" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Upload A File</legend>
+        <label>File to Upload: <input type="file" name="file"/></label>
+        <input id="ajaxUploadButton" type="submit" value="Submit"/>
+    </fieldset>
+</form>
+@section scripts
+{
+    @Scripts.Render("~/Scripts/knockout-2.1.0.js")
+    @Scripts.Render("~/Scripts/jquery.form.js")
+    <script src="~/Scripts/jquery.form.min.js"></script>
+    @Scripts.Render("~/Scripts/Blog.js")
+}

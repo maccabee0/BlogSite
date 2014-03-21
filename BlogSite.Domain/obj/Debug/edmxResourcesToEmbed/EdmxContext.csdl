@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="EdmxContext" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="EdmxContextContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Blogs" EntityType="EdmxContext.Blog" />
+    <EntitySet Name="Users" EntityType="EdmxContext.User" />
+    <AssociationSet Name="FK__Blogs__OwnerId__625A9A57" Association="EdmxContext.FK__Blogs__OwnerId__625A9A57">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Blog" EntitySet="Blogs" />
+    </AssociationSet>
+    <EntitySet Name="Comments" EntityType="EdmxContext.Comment" />
+    <AssociationSet Name="FK__Comments__BlogId__681373AD" Association="EdmxContext.FK__Comments__BlogId__681373AD">
+      <End Role="Blog" EntitySet="Blogs" />
+      <End Role="Comment" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comments__Author__690797E6" Association="EdmxContext.FK__Comments__Author__690797E6">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Comment" EntitySet="Comments" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="BlogId" />
+    </Key>
+    <Property Type="Int32" Name="BlogId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="OwnerId" Nullable="false" />
+    <Property Type="String" Name="Subject" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="PostDate" Precision="0" />
+    <NavigationProperty Name="User" Relationship="EdmxContext.FK__Blogs__OwnerId__625A9A57" FromRole="Blog" ToRole="User" />
+    <NavigationProperty Name="Comments" Relationship="EdmxContext.FK__Comments__BlogId__681373AD" FromRole="Blog" ToRole="Comment" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Type="Int32" Name="UserId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="UserName" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PasswordHash" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Birthday" Nullable="false" Precision="0" />
+    <Property Type="DateTime" Name="JoinDate" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Blogs" Relationship="EdmxContext.FK__Blogs__OwnerId__625A9A57" FromRole="User" ToRole="Blog" />
+    <NavigationProperty Name="Comments" Relationship="EdmxContext.FK__Comments__Author__690797E6" FromRole="User" ToRole="Comment" />
+  </EntityType>
+  <Association Name="FK__Blogs__OwnerId__625A9A57">
+    <End Type="EdmxContext.User" Role="User" Multiplicity="1" />
+    <End Type="EdmxContext.Blog" Role="Blog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Blog">
+        <PropertyRef Name="OwnerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="CommentId" />
+    </Key>
+    <Property Type="Int32" Name="CommentId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="BlogId" Nullable="false" />
+    <Property Type="Int32" Name="AuthorId" Nullable="false" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="PostDate" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Blog" Relationship="EdmxContext.FK__Comments__BlogId__681373AD" FromRole="Comment" ToRole="Blog" />
+    <NavigationProperty Name="User" Relationship="EdmxContext.FK__Comments__Author__690797E6" FromRole="Comment" ToRole="User" />
+  </EntityType>
+  <Association Name="FK__Comments__BlogId__681373AD">
+    <End Type="EdmxContext.Blog" Role="Blog" Multiplicity="1" />
+    <End Type="EdmxContext.Comment" Role="Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Blog">
+        <PropertyRef Name="BlogId" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="BlogId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comments__Author__690797E6">
+    <End Type="EdmxContext.User" Role="User" Multiplicity="1" />
+    <End Type="EdmxContext.Comment" Role="Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="AuthorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

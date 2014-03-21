@@ -1,0 +1,10 @@
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.UnitTest\obj\Debug\Blog.UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.UnitTest\bin\Debug\Blog.UnitTest.dll.config
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.UnitTest\bin\Debug\Blog.UnitTest.dll
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.UnitTest\bin\Debug\Blog.UnitTest.pdb
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.UnitTest\bin\Debug\Blog.Domain.dll
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.UnitTest\bin\Debug\EntityFramework.dll
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.UnitTest\bin\Debug\Blog.Domain.pdb
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.UnitTest\bin\Debug\EntityFramework.xml
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.UnitTest\obj\Debug\Blog.UnitTest.dll
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.UnitTest\obj\Debug\Blog.UnitTest.pdb

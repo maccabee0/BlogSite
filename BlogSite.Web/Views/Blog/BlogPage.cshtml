@@ -1,0 +1,36 @@
+﻿@model BlogSite.Domain.Entities.Blog
+
+@{
+    ViewBag.Title = @Model.Subject;
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Subject</h2>
+
+<p>@Model.Text</p>
+<div id="user">
+    <h3>@Html.ActionLink(@Model.User.UserName, "UserProfile", "Account", new { userName = @Model.User.UserName }, null)</h3>
+    <h4>@Model.User.JoinDate.ToShortDateString()</h4>
+</div>
+@if (HttpContext.Current.User.Identity.Name == @Model.User.UserName)
+{
+    <div id="editBlog">
+        @Html.ActionLink("Edit Blog", "Edit", new { @Model.BlogId })
+    </div>
+}
+@Html.ValidationSummary(true)
+
+@Html.Hidden("SubmitCommentUrl", @Url.Action("PostComment"))
+@Html.HiddenFor(b => b.BlogId)
+
+<input type="text" id="text" />
+<p>
+    <button id="buttonId" class="btn">Submit Comment</button>
+</p>
+<div id="comments">
+    @{ Html.RenderPartial("CommentSummary", @Model.Comments); }
+</div>
+@section scripts
+{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Blog.js")"> </script>
+}

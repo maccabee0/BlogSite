@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Comment>
+@using BlogSite.Domain.Entities
+@using System.Linq
+
+<ul>
+    @foreach (var com in Model.OrderByDescending(c => c.PostDate).Take(5))
+    {
+        <li>
+            @com.Text
+            <br/>date: @com.PostDate
+            <br/>by: @Html.ActionLink(@com.User.UserName, "UserProfile", "Account", new { userName = @com.User.UserName }, null)
+        </li>
+    }
+</ul>

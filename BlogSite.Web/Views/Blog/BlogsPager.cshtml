@@ -1,0 +1,7 @@
+﻿@model IEnumerable<BlogSite.Domain.Entities.Blog>
+
+<div id="blog">
+    <ul>
+        @{ Html.RenderPartial("BlogSummary", @Model); }
+    </ul>
+</div>

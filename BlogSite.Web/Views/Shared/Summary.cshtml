@@ -1,0 +1,15 @@
+﻿
+@if (HttpContext.Current.User.Identity.IsAuthenticated)
+{
+    string name = HttpContext.Current.User.Identity.Name;
+    
+    <ul class="dropdown-menu">
+        <li class="nav-header">Logged in as:</li>
+        <li>@Html.ActionLink(name, "UserProfile", "Account", new { userName = name }, null)</li>
+        <li>@Html.ActionLink("Log Out", "LogOff", "Account")</li>
+    </ul>
+}
+else
+{
+    @Html.ActionLink("Log In", "LogOn", "Account")
+}

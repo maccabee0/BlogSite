@@ -1,0 +1,8 @@
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Services\bin\Debug\Blog.Services.dll
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Services\bin\Debug\Blog.Services.pdb
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Services\obj\Debug\Blog.Services.csprojResolveAssemblyReference.cache
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Services\obj\Debug\Blog.Services.dll
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Services\obj\Debug\Blog.Services.pdb
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Services\bin\Debug\Blog.Services.dll.config
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Services\bin\Debug\EntityFramework.dll
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Services\bin\Debug\EntityFramework.xml

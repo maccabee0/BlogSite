@@ -1,0 +1,46 @@
+﻿@model IEnumerable<BlogSite.Domain.Entities.User>
+@{
+    ViewBag.Title = "UserIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Users</h2>
+<div>@Html.ActionLink("Blogs", "Index", "Admin")</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>UserName</th>
+            <th>Email</th>
+            <th>JoinDate</th>
+            <th>Birthday</th>
+            <th>Current Admin Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserId</td>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                <td>@user.JoinDate.ToShortDateString()</td>
+                <td>@user.Birthday.ToShortDateString()</td>
+                <td>
+                    @using (Html.BeginForm("AdjustAdminStatus", "Admin"))
+                    {
+                        @Html.Hidden("UserId", user.UserId)
+                        if (user.IsAdmin)
+                        {
+                            <input type="submit" value="Admin" class="btn btn-mini btn-danger"/>
+                        }
+                        else
+                        {
+                            <input type="submit" value="Non-Admin" class="btn btn-danger btn-mini"/>
+                        }
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

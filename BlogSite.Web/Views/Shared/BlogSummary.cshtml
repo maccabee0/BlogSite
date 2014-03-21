@@ -1,0 +1,11 @@
+﻿@model IEnumerable<BlogSite.Domain.Entities.Blog>
+
+@foreach (var blog in Model)
+{
+    <li class="breadcrumb">
+        @Html.ActionLink(blog.Subject, "GetBlogById", "Blog", new {id = blog.BlogId}, null)
+        @blog.Description
+        @Html.ActionLink(@blog.User.UserName, "UserProfile", "Account", new {userName = @blog.User.UserName}, null)
+        @blog.PostDate
+    </li>
+}

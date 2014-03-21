@@ -1,0 +1,16 @@
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Services\obj\Debug\BlogSite.Services.csprojResolveAssemblyReference.cache
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Services\obj\Debug\Blog.Services.dll
+C:\Users\mbrinda\documents\visual studio 2012\Projects\Blog\Blog.Services\obj\Debug\Blog.Services.pdb
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Services\obj\Debug\BlogSite.Services.csprojResolveAssemblyReference.cache
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Services\obj\Debug\Blog.Services.dll
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Services\obj\Debug\Blog.Services.pdb
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Services\bin\Debug\Blog.Services.dll.config
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Services\bin\Debug\Blog.Services.dll
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Services\bin\Debug\Blog.Services.pdb
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Services\bin\Debug\Blog.Domain.dll
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Services\bin\Debug\EntityFramework.dll
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Services\bin\Debug\Blog.Domain.pdb
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Services\bin\Debug\EntityFramework.xml
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Services\bin\Debug\Ninject.dll
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Services\bin\Debug\Ninject.pdb
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Services\bin\Debug\Ninject.xml

@@ -55,7 +55,7 @@ namespace BlogSite.Web.Controllers
             {
                 if (!_authProvider.ValidateUserName(model.UserName))
                 {
-                    TempData["message"] = string.Format("User {0} is not been saved", model.UserName);
+                    TempData["message"] = string.Format("User {0} has not been saved", model.UserName);
                     ModelState.AddModelError("", "User Name invalid or already taken.");
                 }
                 else

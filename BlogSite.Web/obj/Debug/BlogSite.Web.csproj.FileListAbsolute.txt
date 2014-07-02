@@ -66,7 +66,6 @@ C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin
 C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Ninject.dll
 C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Blog.Domain.dll
 C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Blog.Services.pdb
-C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Ninject.pdb
 C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Ninject.xml
 C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Blog.Domain.pdb
 C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Blog.Web.dll.config
@@ -75,3 +74,17 @@ C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin
 C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\System.Net.Http.Extensions.xml
 C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\System.Net.Http.Primitives.xml
 C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\obj\Debug\BlogSite.Web.csproj.App.config
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Moq.dll
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Ninject.MockingKernel.dll
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Ninject.MockingKernel.Moq.dll
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Ninject.Web.Common.dll
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Ninject.Web.dll
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Ninject.Web.Mvc.dll
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\WebActivatorEx.dll
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Moq.pdb
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Moq.xml
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Ninject.MockingKernel.xml
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Ninject.MockingKernel.Moq.xml
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Ninject.Web.xml
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Ninject.Web.Common.xml
+C:\Users\mbrinda\Documents\Visual Studio 2012\Projects\BlogSite\BlogSite.Web\bin\Ninject.Web.Mvc.xml

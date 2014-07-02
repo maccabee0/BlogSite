@@ -1,51 +1,49 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Web.Mvc;
-using BlogSite.Web.Infrastructure.Abstract;
-using BlogSite.Web.Infrastructure.Concrete;
-using Ninject;
-using Ninject.Syntax;
+﻿using System.Web.Http.Dependencies;
 
-using BlogSite.Services.Abstract;
-using BlogSite.Services.Concrete;
+using Ninject;
 
 namespace BlogSite.Web.Infrastructure
 {
-    public class NinjectDependencyResolver : IDependencyResolver
+    public class NinjectDependencyResolver : NinjectScope, IDependencyResolver
     {
-        private IKernel kernel;
+        private IKernel _kernel;
 
-        public NinjectDependencyResolver()
+        public NinjectDependencyResolver(IKernel kernel)
+            :base(kernel)
         {
-            kernel = new StandardKernel();
-            AddBindings();
+            _kernel = kernel;
+            //AddBindings();
         }
 
-        public object GetService(Type serviceType)
+        public IDependencyScope BeginScope()
         {
-            return kernel.TryGet(serviceType);
+            return new NinjectScope(_kernel.BeginBlock());
         }
 
-        public IEnumerable<object> GetServices(Type serviceType)
-        {
-            return kernel.GetAll(serviceType);
-        }
+        //public object GetService(Type serviceType)
+        //{
+        //    return _kernel.TryGet(serviceType);
+        //}
 
-        public IBindingToSyntax<T> Bind<T>()
-        {
-            return kernel.Bind<T>();
-        }
+        //public IEnumerable<object> GetServices(Type serviceType)
+        //{
+        //    return _kernel.GetAll(serviceType);
+        //}
 
-        public IKernel Kernel { get { return kernel; } }
+        //public IBindingToSyntax<T> Bind<T>()
+        //{
+        //    return _kernel.Bind<T>();
+        //}
 
-        private void AddBindings()
-        {
-            Bind<IAuthProvider>().To<FormsAuthProvider>();
-            Bind<IService>().To<SiteService>();
-            Bind<IBlogRepository>().To<BlogRepository>();
-            Bind<IUserRepository>().To<UserRepository>();
-            Bind<ICommentRepository>().To<CommentRepository>();
-        }
+        //public IKernel Kernel { get { return _kernel; } }
+
+        //private void AddBindings()
+        //{
+        //    Bind<IAuthProvider>().To<FormsAuthProvider>();
+        //    Bind<IService>().To<SiteService>();
+        //    Bind<IBlogRepository>().To<BlogRepository>();
+        //    Bind<IUserRepository>().To<UserRepository>();
+        //    Bind<ICommentRepository>().To<CommentRepository>();
+        //}
     }
 }
